@@ -43,5 +43,5 @@ git push origin source
 Configuring Octopress
 _config.yml : Blog Configuration
 
-
+new
 
