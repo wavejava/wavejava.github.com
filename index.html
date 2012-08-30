@@ -5,11 +5,14 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>My Octopress Blog</title>
-  <meta name="author" content="Your Name">
+  <title>Wavejava's Blog</title>
+  <meta name="author" content="Mark Ma">
 
   
-  <meta name="description" content="How are you !
+  <meta name="description" content="get.pow.cx git clone https://github.com/defunkt/resque.git cd resque
+bundle install cd ~/.pow
+ln -s path
+open http://resque.dev
 ">
   
 
@@ -25,7 +28,7 @@
   <script src="/javascripts/modernizr-2.0.js"></script>
   <script src="/javascripts/ender.js"></script>
   <script src="/javascripts/octopress.js" type="text/javascript"></script>
-  <link href="/atom.xml" rel="alternate" title="My Octopress Blog" type="application/atom+xml">
+  <link href="/atom.xml" rel="alternate" title="Wavejava's Blog" type="application/atom+xml">
   <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
 <link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
 <link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
@@ -36,7 +39,7 @@
 
 <body   >
   <header role="banner"><hgroup>
-  <h1><a href="/">My Octopress Blog</a></h1>
+  <h1><a href="/">Wavejava's Blog</a></h1>
   
     <h2>A blogging framework for hackers.</h2>
   
@@ -71,7 +74,88 @@
       
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2012/08/30/my-second-post/">My Second Post</a></h1>
+      <h1 class="entry-title"><a href="/blog/2012/08/30/setup-pow/">Setup Pow</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-08-30T23:53:00+08:00" pubdate data-updated="true">Aug 30<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>get.pow.cx</p>
+
+<p>git clone https://github.com/defunkt/resque.git</p>
+
+<p>cd resque
+bundle install</p>
+
+<p>cd ~/.pow
+ln -s path
+open http://resque.dev</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/08/30/how-to-use-markdown/">How to Use Markdown</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-08-30T23:48:00+08:00" pubdate data-updated="true">Aug 30<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content">
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/08/30/my-second-post/">How to Setup Octopress & Deploy to GitHub?</a></h1>
     
     
       <p class="meta">
@@ -94,7 +178,57 @@
   </header>
 
 
-  <div class="entry-content"><p>How are you !</p>
+  <div class="entry-content"><p>Install Git.
+Install Ruby 1.9.3 using either rbenv or RVM.
+If ruby &#8211;version doesn’t say you’re using Ruby 1.9.3, revisit your rbenv or RVM installation.</p>
+
+<p>Setup Octopress</p>
+
+<p>git clone git://github.com/imathis/octopress.git octopress
+cd octopress    # If you use RVM, You&#8217;ll be asked if you trust the .rvmrc file (say yes).
+ruby &#8211;version  # Should report Ruby 1.9.3
+Next, install dependencies.</p>
+
+<p>gem install bundler
+rbenv rehash    # If you use rbenv, rehash to be able to run the bundle command
+bundle install
+Install the default Octopress theme.</p>
+
+<p>rake install</p>
+
+<p>rake new_post[&#8220;My First Post&#8221;]
+rake new_post[&#8220;My Second Post&#8221;]
+rake generate
+rake watch
+rake preview</p>
+
+<p>http://localhost:4000</p>
+
+<p>Deploying to Github Pages
+1. create github repository wavejava.github.com, and check http://wavejava.github.com
+2. rake setup_github_pages
+Ask you for your Github Pages repository url.
+Rename the remote pointing to imathis/octopress from ‘origin’ to ‘octopress’
+Add your Github Pages repository as the default origin remote.
+Switch the active branch from master to source.
+Configure your blog’s url according to your repository.
+Setup a master branch in the _deploy directory for deployment.</p>
+
+<p>git@github.com:wavejava/wavejava.github.com</p>
+
+<ol>
+<li><p>rake generate
+rake deploy</p></li>
+<li><p>commit the source for my blog
+git add .
+git commit -m &#8216;your message&#8217;
+git push origin source</p></li>
+</ol>
+
+
+<p>==========
+Configuring Octopress
+_config.yml : Blog Configuration</p>
 </div>
   
   
@@ -156,7 +290,15 @@ Hello Web !
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/blog/2012/08/30/my-second-post/">My Second Post</a>
+        <a href="/blog/2012/08/30/setup-pow/">setup pow</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/08/30/how-to-use-markdown/">How to use Markdown</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/08/30/my-second-post/">How to setup Octopress & deploy to GitHub?</a>
       </li>
     
       <li class="post">
@@ -177,7 +319,7 @@ Hello Web !
     </div>
   </div>
   <footer role="contentinfo"><p>
-  Copyright &copy; 2012 - Your Name -
+  Copyright &copy; 2012 - Mark Ma -
   <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
 </p>
 
