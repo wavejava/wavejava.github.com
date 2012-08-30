@@ -1,0 +1,18 @@
+---
+layout: post
+title: "setup pow"
+date: 2012-08-30 23:53
+comments: true
+categories: setup
+---
+
+get.pow.cx
+
+git clone https://github.com/defunkt/resque.git
+
+cd resque
+bundle install
+
+cd ~/.pow
+ln -s path
+open http://resque.dev
