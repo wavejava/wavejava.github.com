@@ -4,7 +4,7 @@
   <title><![CDATA[Category: setup | Wavejava's Blog]]></title>
   <link href="http://wavejava.github.com/blog/categories/setup/atom.xml" rel="self"/>
   <link href="http://wavejava.github.com/"/>
-  <updated>2012-09-08T15:11:24+08:00</updated>
+  <updated>2012-09-08T16:31:24+08:00</updated>
   <id>http://wavejava.github.com/</id>
   <author>
     <name><![CDATA[Mark Ma]]></name>
@@ -192,7 +192,7 @@ Markdown.pl source code for more information.</p>
 <h2>Bugs</h2>
 
 <p>To file bug reports or feature requests please send email to:
-<a href="&#109;&#97;&#105;&#x6c;&#x74;&#x6f;&#x3a;&#x6d;&#97;&#x72;&#107;&#x64;&#x6f;&#x77;&#x6e;&#64;&#100;&#97;&#114;&#105;&#110;&#103;&#x66;&#x69;&#114;&#x65;&#98;&#97;&#108;&#108;&#x2e;&#110;&#101;&#x74;">&#109;&#97;&#114;&#x6b;&#x64;&#x6f;&#119;&#110;&#64;&#x64;&#x61;&#x72;&#x69;&#x6e;&#x67;&#x66;&#x69;&#x72;&#x65;&#x62;&#97;&#x6c;&#108;&#46;&#x6e;&#101;&#116;</a>.</p>
+<a href="&#x6d;&#x61;&#x69;&#x6c;&#116;&#111;&#x3a;&#x6d;&#x61;&#114;&#107;&#x64;&#x6f;&#119;&#110;&#64;&#x64;&#x61;&#114;&#105;&#x6e;&#103;&#x66;&#105;&#114;&#x65;&#98;&#97;&#x6c;&#x6c;&#46;&#110;&#101;&#116;">&#x6d;&#97;&#114;&#107;&#x64;&#x6f;&#119;&#x6e;&#64;&#x64;&#x61;&#114;&#x69;&#x6e;&#103;&#x66;&#x69;&#x72;&#x65;&#x62;&#97;&#108;&#108;&#46;&#110;&#x65;&#x74;</a>.</p>
 
 <h2>Version History</h2>
 
@@ -366,57 +366,99 @@ software, even if advised of the possibility of such damage.</p>
     <link href="http://wavejava.github.com/blog/2012/08/30/my-second-post/"/>
     <updated>2012-08-30T17:39:00+08:00</updated>
     <id>http://wavejava.github.com/blog/2012/08/30/my-second-post</id>
-    <content type="html"><![CDATA[<p>Install Git.
-Install Ruby 1.9.3 using either rbenv or RVM.
-If ruby --version doesn’t say you’re using Ruby 1.9.3, revisit your rbenv or RVM installation.</p>
+    <content type="html"><![CDATA[<ul>
+<li><a href="#install">Install Git &amp; Ruby</a></li>
+<li><a href="#useOct">Use Octopress</a></li>
+<li><a href="#deploy">Deploy to Github</a></li>
+</ul>
 
-<p>Setup Octopress</p>
 
-<p>git clone git://github.com/imathis/octopress.git octopress
-cd octopress    # If you use RVM, You'll be asked if you trust the .rvmrc file (say yes).
-ruby --version  # Should report Ruby 1.9.3
-Next, install dependencies.</p>
+<h2 id="install">  Install Git, Ruby & Octopress </h2>
 
-<p>gem install bundler
+
+<p>Install Git.</p>
+
+<p>Install Ruby 1.9.3 using either rbenv or RVM.</p>
+
+<blockquote><p>If ruby --version doesn’t say you’re using Ruby 1.9.3, revisit your rbenv or RVM installation.</p></blockquote>
+
+<p>Install Octopress</p>
+
+<pre><code> git clone git://github.com/imathis/octopress.git octopress
+
+ cd octopress    # If you use RVM, You'll be asked if you trust the .rvmrc file (say yes).
+
+ ruby --version  # Should report Ruby 1.9.3
+</code></pre>
+
+<p>Next, install dependencies.</p>
+
+<pre><code>gem install bundler
+
 rbenv rehash    # If you use rbenv, rehash to be able to run the bundle command
+
 bundle install
-Install the default Octopress theme.</p>
+</code></pre>
 
-<p>rake install</p>
+<p>Install the default Octopress theme.</p>
 
-<p>rake new_post["My First Post"]
+<pre><code>rake install
+</code></pre>
+
+<h2 id="useOct"> Use Octopress </h2>
+
+
+<pre><code>rake new_post["My First Post"]
+
 rake new_post["My Second Post"]
+
 rake generate
+
 rake watch
-rake preview</p>
 
-<p>http://localhost:4000</p>
+rake preview
 
-<p>Deploying to Github Pages
-1. create github repository wavejava.github.com, and check http://wavejava.github.com
-2. rake setup_github_pages
-Ask you for your Github Pages repository url.
-Rename the remote pointing to imathis/octopress from ‘origin’ to ‘octopress’
-Add your Github Pages repository as the default origin remote.
-Switch the active branch from master to source.
-Configure your blog’s url according to your repository.
-Setup a master branch in the _deploy directory for deployment.</p>
+http://localhost:4000
+</code></pre>
 
-<p>git@github.com:wavejava/wavejava.github.com</p>
+<h2 id="deploy"> Deploying to Github Pages </h2>
+
+
+<p>Initialize :</p>
+
+<p>create github repository wavejava.github.com, and check http://wavejava.github.com</p>
+
+<pre><code>rake setup_github_pages
+</code></pre>
 
 <ol>
-<li><p>rake generate
-rake deploy</p></li>
-<li><p>commit the source for my blog
-git add .
-git commit -m 'your message'
-git push origin source</p></li>
+<li>Ask you for your Github Pages repository url.</li>
+<li>Rename the remote pointing to imathis/octopress from ‘origin’ to ‘octopress’</li>
+<li>Add your Github Pages repository as the default origin remote.</li>
+<li>Switch the active branch from master to source.</li>
+<li>Configure your blog’s url according to your repository.</li>
+<li>Setup a master branch in the _deploy directory for deployment.</li>
 </ol>
 
 
-<p>==========
-Configuring Octopress
-_config.yml : Blog Configuration</p>
+<p>git@github.com:wavejava/wavejava.github.com</p>
+
+<pre><code>rake generate
+rake deploy
+</code></pre>
+
+<p>commit the source for my blog</p>
+
+<pre><code>git add .
+git commit -m 'your message'
+git push origin source
+</code></pre>
+
+<hr />
+
+<p>Configuring Octopress</p>
+
+<p>_config.yml : Blog Configuration</p>
 ]]></content>
   </entry>
   
