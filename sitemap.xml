@@ -2,26 +2,30 @@
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
         <loc>http://wavejava.github.com/blog/2012/08/30/my-first-post/</loc>
-        <lastmod>2012-09-08T11:08:33+08:00</lastmod>
+        <lastmod>2012-09-08T11:37:29+08:00</lastmod>
     </url>
     <url>
         <loc>http://wavejava.github.com/blog/2012/08/30/my-second-post/</loc>
-        <lastmod>2012-09-08T11:08:33+08:00</lastmod>
+        <lastmod>2012-09-08T11:37:29+08:00</lastmod>
     </url>
     <url>
         <loc>http://wavejava.github.com/blog/2012/08/30/how-to-use-markdown/</loc>
-        <lastmod>2012-09-08T11:08:33+08:00</lastmod>
+        <lastmod>2012-09-08T11:37:29+08:00</lastmod>
     </url>
     <url>
         <loc>http://wavejava.github.com/blog/2012/08/30/setup-pow/</loc>
-        <lastmod>2012-09-08T11:08:33+08:00</lastmod>
+        <lastmod>2012-09-08T11:37:29+08:00</lastmod>
+    </url>
+    <url>
+        <loc>http://wavejava.github.com/blog/2012/09/08/markdown-yu-fa/</loc>
+        <lastmod>2012-09-08T12:06:25+08:00</lastmod>
     </url>
     <url>
         <loc>http://wavejava.github.com/blog/archives/</loc>
-        <lastmod>2012-09-08T11:08:33+08:00</lastmod>
+        <lastmod>2012-09-08T12:06:25+08:00</lastmod>
     </url>
     <url>
         <loc>http://wavejava.github.com/</loc>
-        <lastmod>2012-09-08T11:08:33+08:00</lastmod>
+        <lastmod>2012-09-08T12:06:25+08:00</lastmod>
     </url>
 </urlset>
