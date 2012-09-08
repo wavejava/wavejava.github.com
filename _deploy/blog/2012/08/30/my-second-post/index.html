@@ -9,9 +9,9 @@
   <meta name="author" content="Mark Ma">
 
   
-  <meta name="description" content="Install Git.
-Install Ruby 1.9.3 using either rbenv or RVM.
-If ruby &#8211;version doesn’t say you’re using Ruby 1.9.3, revisit your rbenv or RVM &hellip;">
+  <meta name="description" content="Install Git &amp; Ruby
+Use Octopress
+Deploy to Github Install Git, Ruby & Octopress Install Git. Install Ruby 1.9.3 using either rbenv or RVM. If &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -92,57 +92,99 @@ If ruby &#8211;version doesn’t say you’re using Ruby 1.9.3, revisit your rbe
   </header>
 
 
-<div class="entry-content"><p>Install Git.
-Install Ruby 1.9.3 using either rbenv or RVM.
-If ruby &#8211;version doesn’t say you’re using Ruby 1.9.3, revisit your rbenv or RVM installation.</p>
+<div class="entry-content"><ul>
+<li><a href="#install">Install Git &amp; Ruby</a></li>
+<li><a href="#useOct">Use Octopress</a></li>
+<li><a href="#deploy">Deploy to Github</a></li>
+</ul>
 
-<p>Setup Octopress</p>
 
-<p>git clone git://github.com/imathis/octopress.git octopress
-cd octopress    # If you use RVM, You&#8217;ll be asked if you trust the .rvmrc file (say yes).
-ruby &#8211;version  # Should report Ruby 1.9.3
-Next, install dependencies.</p>
+<h2 id="install">  Install Git, Ruby & Octopress </h2>
 
-<p>gem install bundler
+
+<p>Install Git.</p>
+
+<p>Install Ruby 1.9.3 using either rbenv or RVM.</p>
+
+<blockquote><p>If ruby &#8211;version doesn’t say you’re using Ruby 1.9.3, revisit your rbenv or RVM installation.</p></blockquote>
+
+<p>Install Octopress</p>
+
+<pre><code> git clone git://github.com/imathis/octopress.git octopress
+
+ cd octopress    # If you use RVM, You'll be asked if you trust the .rvmrc file (say yes).
+
+ ruby --version  # Should report Ruby 1.9.3
+</code></pre>
+
+<p>Next, install dependencies.</p>
+
+<pre><code>gem install bundler
+
 rbenv rehash    # If you use rbenv, rehash to be able to run the bundle command
+
 bundle install
-Install the default Octopress theme.</p>
+</code></pre>
 
-<p>rake install</p>
+<p>Install the default Octopress theme.</p>
 
-<p>rake new_post[&#8220;My First Post&#8221;]
-rake new_post[&#8220;My Second Post&#8221;]
+<pre><code>rake install
+</code></pre>
+
+<h2 id="useOct"> Use Octopress </h2>
+
+
+<pre><code>rake new_post["My First Post"]
+
+rake new_post["My Second Post"]
+
 rake generate
+
 rake watch
-rake preview</p>
 
-<p>http://localhost:4000</p>
+rake preview
 
-<p>Deploying to Github Pages
-1. create github repository wavejava.github.com, and check http://wavejava.github.com
-2. rake setup_github_pages
-Ask you for your Github Pages repository url.
-Rename the remote pointing to imathis/octopress from ‘origin’ to ‘octopress’
-Add your Github Pages repository as the default origin remote.
-Switch the active branch from master to source.
-Configure your blog’s url according to your repository.
-Setup a master branch in the _deploy directory for deployment.</p>
+http://localhost:4000
+</code></pre>
 
-<p>git@github.com:wavejava/wavejava.github.com</p>
+<h2 id="deploy"> Deploying to Github Pages </h2>
+
+
+<p>Initialize :</p>
+
+<p>create github repository wavejava.github.com, and check http://wavejava.github.com</p>
+
+<pre><code>rake setup_github_pages
+</code></pre>
 
 <ol>
-<li><p>rake generate
-rake deploy</p></li>
-<li><p>commit the source for my blog
-git add .
-git commit -m &#8216;your message&#8217;
-git push origin source</p></li>
+<li>Ask you for your Github Pages repository url.</li>
+<li>Rename the remote pointing to imathis/octopress from ‘origin’ to ‘octopress’</li>
+<li>Add your Github Pages repository as the default origin remote.</li>
+<li>Switch the active branch from master to source.</li>
+<li>Configure your blog’s url according to your repository.</li>
+<li>Setup a master branch in the _deploy directory for deployment.</li>
 </ol>
 
 
-<p>==========
-Configuring Octopress
-_config.yml : Blog Configuration</p>
+<p>git@github.com:wavejava/wavejava.github.com</p>
+
+<pre><code>rake generate
+rake deploy
+</code></pre>
+
+<p>commit the source for my blog</p>
+
+<pre><code>git add .
+git commit -m 'your message'
+git push origin source
+</code></pre>
+
+<hr />
+
+<p>Configuring Octopress</p>
+
+<p>_config.yml : Blog Configuration</p>
 </div>
 
 
@@ -206,6 +248,10 @@ _config.yml : Blog Configuration</p>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2012/09/08/markdown-syntax/">Markdown : Syntax</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2012/09/08/markdown-yu-fa/">Markdown: 语法 </a>
       </li>
     
@@ -219,10 +265,6 @@ _config.yml : Blog Configuration</p>
     
       <li class="post">
         <a href="/blog/2012/08/30/my-second-post/">How to setup Octopress & deploy to GitHub?</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/08/30/my-first-post/">My First Post</a>
       </li>
     
   </ul>
